@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "10616834949",
+    "project_id": "tweeter-by-lavesh",
+    "storage_bucket": "tweeter-by-lavesh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10616834949:android:0293efdf6a87141c6452ec",
+        "android_client_info": {
+          "package_name": "com.mittaltech.tweeter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10616834949-df4tue8jsb7up3apjgiflfpv814qifhl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mittaltech.tweeter",
+            "certificate_hash": "e67948e467195dfb39cffc3e5115d00eb3ede253"
+          }
+        },
+        {
+          "client_id": "10616834949-hjsa7sk3p62i6jr764tar2pic2cn1o78.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2EwCV3tJz2MenErU8mC4DhQtDlExjunc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10616834949-hjsa7sk3p62i6jr764tar2pic2cn1o78.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
