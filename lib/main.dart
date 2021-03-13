@@ -1,11 +1,12 @@
 import 'dart:async';
 
+import 'package:auto_route/auto_route.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
-import 'package:flutter/material.dart';
-import 'package:tweeter/splash-screen.dart';
+import 'package:flutter/material.dart' hide Router;
+import 'package:tweeter/router.gr.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,20 +21,16 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
-  FirebaseAnalytics analytics = FirebaseAnalytics();
-
+  final FirebaseAnalytics analytics = FirebaseAnalytics();
+  final GlobalKey<NavigatorState> navigatorKey =
+      new GlobalKey<NavigatorState>();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      navigatorObservers: [
-        FirebaseAnalyticsObserver(analytics: analytics),
-      ],
       title: 'Tweeter by Lavesh',
-      theme: ThemeData(
-        primarySwatch: Colors.cyan,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: SplashScreen(),
+      builder: ExtendedNavigator(router: Router(), observers: [
+        FirebaseAnalyticsObserver(analytics: analytics),
+      ]),
     );
   }
 }
